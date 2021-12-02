@@ -36,10 +36,10 @@ console.log(characters)
                 $(image).appendTo(resultCard)
                 }
 
-                let house = $(`<div><h2>Hogwarts House: ${elem.house}</h2></div>`).addClass('house-card')
+                let house = $(`<div><h2>House: ${elem.house}</h2></div>`).addClass('house-card')
                 $(house).appendTo(resultCard)
 
-                let ancestry = $(`<div><h3>Wizarding Lineage: ${elem.ancestry.toUpperCase()}</h3></div>`).addClass('ancestry-card')
+                let ancestry = $(`<div><h3> Lineage: ${elem.ancestry.toUpperCase()}</h3></div>`).addClass('ancestry-card')
                 $(ancestry).appendTo(resultCard)
 
                 // let wood = elem.wand.wood

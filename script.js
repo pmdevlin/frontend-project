@@ -61,19 +61,60 @@ console.log(characters)
     })
 }
 
+
+
+
+
+
+
+
+
+gryffindorImage()
+
+function gryffindorImage(){
+        let gLogo = $('<img></img>').addClass('gLogo').attr('src','https://e7.pngegg.com/pngimages/182/596/png-clipart-red-and-brown-lion-logo-sorting-hat-hogwarts-gryffindor-harry-potter-ravenclaw-house-harry-potter-mammal-cat-like-mammal-thumbnail.png')
+        $(gLogo).appendTo('#gryffindor-div')
+
+      let gButton = $('.gLogo').click(gryffindorButton) //document.getElementByClass('gLogo').addEventListener('click', gryffindorButton)
+     $(gButton).appendTo('#gryffindor-div')
+}
+
 async function gryffindorButton (){
-   // research promises  
     const response = await fetch('http://hp-api.herokuapp.com/api/characters')
     const data = await response.json()
     const gryffindors =data.filter( (person) => {
     return person.house === "Gryffindor"
     })
-    console.log(gryffindors)
+
+    const gElement = document.getElementById('gryffindor-div')
+    
+
+    const gArr = document.getElementsByClassName('gNames')
+    console.log(gArr)
+
+    if(gElement.children.length > 1){
+       
+        for(let i = 0; gArr.length; i ){
+            //console.log(gArr[i])
+            gArr[i].remove()
+        }
+    }else{
+        
+        for(let i = 0; i < 10; i++){
+
+            let gNames = $('<div></div>').addClass('gNames').text(gryffindors[i].name)
+            $(gNames).appendTo('#gryffindor-div')
+        }
+    }
+    
+     console.log(gryffindors)
+     
+
 }
-    document.getElementById('gLogo').addEventListener('click', gryffindorButton)
 
 
- 
+
+
 async function slytherinButton (){
     const response = await fetch('http://hp-api.herokuapp.com/api/characters')
     const data = await response.json()
@@ -82,7 +123,7 @@ async function slytherinButton (){
     })
     console.log(slytherin)
  }
-    document.getElementById('sLogo').addEventListener('click', slytherinButton)
+    //document.getElementById('sLogo').addEventListener('click', slytherinButton)
 
 
 async function HufflepuffButton (){
@@ -93,7 +134,7 @@ async function HufflepuffButton (){
     })
     console.log(hufflepuff)
 }
-    document.getElementById('hLogo').addEventListener('click', HufflepuffButton)
+    //document.getElementById('hLogo').addEventListener('click', HufflepuffButton)
 
 
 async function ravenclawButton (){
@@ -104,7 +145,7 @@ async function ravenclawButton (){
     })
     console.log(ravenclaw)
  }
-    document.getElementById('rLogo').addEventListener('click', ravenclawButton)
+    //document.getElementById('rLogo').addEventListener('click', ravenclawButton)
 
 
 

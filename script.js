@@ -1,8 +1,4 @@
 
-
-
-
-
 search()
 function search (){
     let characters 
@@ -46,12 +42,12 @@ console.log(characters)
                 let ancestry = $(`<div><h3>Wizarding Lineage: ${elem.ancestry.toUpperCase()}</h3></div>`).addClass('ancestry-card')
                 $(ancestry).appendTo(resultCard)
 
-                let wood = elem.wand.wood
-                let core = elem.wand.core
-                let length= elem.wand.length
+                // let wood = elem.wand.wood
+                // let core = elem.wand.core
+                // let length= elem.wand.length
 
-                let wand= $(`<div><h4> Wand Made of:${wood} Core of: ${core} length of: ${length}</h4></div>`).addClass('wand-card')
-                $(wand).appendTo(resultCard)
+                // let wand= $(`<div><h4> Wand Made of:${wood} Core of: ${core} length of: ${length}</h4></div>`).addClass('wand-card')
+                // $(wand).appendTo(resultCard)
                 
 
 
@@ -65,14 +61,50 @@ console.log(characters)
     })
 }
 
+async function gryffindorButton (){
+   // research promises  
+    const response = await fetch('http://hp-api.herokuapp.com/api/characters')
+    const data = await response.json()
+    const gryffindors =data.filter( (person) => {
+    return person.house === "Gryffindor"
+    })
+    console.log(gryffindors)
+}
+    document.getElementById('gLogo').addEventListener('click', gryffindorButton)
 
 
-   
+ 
+async function slytherinButton (){
+    const response = await fetch('http://hp-api.herokuapp.com/api/characters')
+    const data = await response.json()
+    const slytherin =data.filter( (person) => {
+    return person.house === "Slytherin"
+    })
+    console.log(slytherin)
+ }
+    document.getElementById('sLogo').addEventListener('click', slytherinButton)
 
 
+async function HufflepuffButton (){
+    const response = await fetch('http://hp-api.herokuapp.com/api/characters')
+    const data = await response.json()
+    const hufflepuff =data.filter( (person) => {
+    return person.house === "Hufflepuff"
+    })
+    console.log(hufflepuff)
+}
+    document.getElementById('hLogo').addEventListener('click', HufflepuffButton)
 
 
-
+async function ravenclawButton (){
+    const response = await fetch('http://hp-api.herokuapp.com/api/characters')
+    const data = await response.json()
+    const ravenclaw =data.filter( (person) => {
+    return person.house === "Ravenclaw"
+    })
+    console.log(ravenclaw)
+ }
+    document.getElementById('rLogo').addEventListener('click', ravenclawButton)
 
 
 

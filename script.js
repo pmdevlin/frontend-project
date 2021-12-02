@@ -72,11 +72,11 @@ console.log(characters)
 gryffindorImage()
 
 function gryffindorImage(){
-        let gLogo = $('<img></img>').addClass('gLogo').attr('src','https://e7.pngegg.com/pngimages/182/596/png-clipart-red-and-brown-lion-logo-sorting-hat-hogwarts-gryffindor-harry-potter-ravenclaw-house-harry-potter-mammal-cat-like-mammal-thumbnail.png')
-        $(gLogo).appendTo('#gryffindor-div')
+    let gLogo = $('<img></img>').addClass('gLogo').attr('src','https://static.wikia.nocookie.net/pottermore/images/1/16/Gryffindor_crest.png/revision/latest/scale-to-width-down/217?cb=20111112232412')
+    $(gLogo).appendTo('#gryffindor-div')
 
-      let gButton = $('.gLogo').click(gryffindorButton) //document.getElementByClass('gLogo').addEventListener('click', gryffindorButton)
-     $(gButton).appendTo('#gryffindor-div')
+    let gButton = $('.gLogo').click(gryffindorButton) 
+    $(gButton).appendTo('#gryffindor-div')
 }
 
 async function gryffindorButton (){
@@ -85,34 +85,28 @@ async function gryffindorButton (){
     const gryffindors =data.filter( (person) => {
     return person.house === "Gryffindor"
     })
-
     const gElement = document.getElementById('gryffindor-div')
-    
-
     const gArr = document.getElementsByClassName('gNames')
-    console.log(gArr)
-
+    
     if(gElement.children.length > 1){
-       
         for(let i = 0; gArr.length; i ){
-            //console.log(gArr[i])
             gArr[i].remove()
         }
     }else{
-        
         for(let i = 0; i < 10; i++){
-
             let gNames = $('<div></div>').addClass('gNames').text(gryffindors[i].name)
             $(gNames).appendTo('#gryffindor-div')
         }
     }
-    
-     console.log(gryffindors)
-     
-
 }
+slytherinImage()
+function slytherinImage(){
+    let sLogo = $('<img></img>').addClass('sLogo').attr('src','https://www.nicepng.com/png/full/43-438820_slytherin-crest-slytherin-png.png')
+    $(sLogo).appendTo('#slytherin-div')
 
-
+    let gButton = $('.sLogo').click(slytherinButton) 
+    $(gButton).appendTo('#slytherin-div')
+}
 
 
 async function slytherinButton (){
@@ -121,21 +115,60 @@ async function slytherinButton (){
     const slytherin =data.filter( (person) => {
     return person.house === "Slytherin"
     })
-    console.log(slytherin)
+    const sElement = document.getElementById('slytherin-div')
+    const sArr = document.getElementsByClassName('sNames')
+    
+    if(sElement.children.length > 1){
+        for(let i = 0; sArr.length; i ){
+            sArr[i].remove()
+        }
+    }else{
+        for(let i = 0; i < 10; i++){
+            let sNames = $('<div></div>').addClass('sNames').text(slytherin[i].name)
+            $(sNames).appendTo('#slytherin-div')
+        }
+    }
  }
-    //document.getElementById('sLogo').addEventListener('click', slytherinButton)
+    
+ hufflepuffImage()
+ function hufflepuffImage(){
+     let hLogo = $('<img></img>').addClass('hLogo').attr('src','https://static.wikia.nocookie.net/the-potters/images/5/5e/Hufflepuff_crest.png/revision/latest/scale-to-width-down/204?cb=20200616224259')
+     $(hLogo).appendTo('#hufflepuff-div')
+ 
+     let hButton = $('.hLogo').click(hufflepuffButton) 
+     $(hButton).appendTo('#hufflepuff-div')
+ }
 
-
-async function HufflepuffButton (){
+async function hufflepuffButton (){
     const response = await fetch('http://hp-api.herokuapp.com/api/characters')
     const data = await response.json()
     const hufflepuff =data.filter( (person) => {
     return person.house === "Hufflepuff"
     })
-    console.log(hufflepuff)
+    const hElement = document.getElementById('hufflepuff-div')
+    const hArr = document.getElementsByClassName('hNames')
+    
+    if(hElement.children.length > 1){
+        for(let i = 0; hArr.length; i ){
+            hArr[i].remove()
+        }
+    }else{
+        for(let i = 0; i < 10; i++){
+            let hNames = $('<div></div>').addClass('hNames').text(hufflepuff[i].name)
+            $(hNames).appendTo('#hufflepuff-div')
+        }
+    }
 }
-    //document.getElementById('hLogo').addEventListener('click', HufflepuffButton)
+    
 
+ravenclawImage()
+function ravenclawImage(){
+    let rLogo = $('<img></img>').addClass('rLogo').attr('src','https://static.wikia.nocookie.net/pottermore/images/4/40/Ravenclaw_Crest_1.png/revision/latest/scale-to-width-down/826?cb=20140604194505')
+    $(rLogo).appendTo('#ravenclaw-div')
+
+    let rButton = $('.rLogo').click(ravenclawButton) 
+    $(rButton).appendTo('#ravenclaw-div')
+}
 
 async function ravenclawButton (){
     const response = await fetch('http://hp-api.herokuapp.com/api/characters')
@@ -143,9 +176,22 @@ async function ravenclawButton (){
     const ravenclaw =data.filter( (person) => {
     return person.house === "Ravenclaw"
     })
-    console.log(ravenclaw)
+    
+    const rElement = document.getElementById('ravenclaw-div')
+    const rArr = document.getElementsByClassName('rNames')
+    
+    if(rElement.children.length > 1){
+        for(let i = 0; rArr.length; i ){
+            rArr[i].remove()
+        }
+    }else{
+        for(let i = 0; i < 10; i++){
+            let rNames = $('<div></div>').addClass('rNames').text(ravenclaw[i].name)
+            $(rNames).appendTo('#ravenclaw-div')
+        }
+    }
  }
-    //document.getElementById('rLogo').addEventListener('click', ravenclawButton)
+    
 
 
 

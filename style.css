@@ -1,8 +1,84 @@
 body {
+    
+    padding: 5px;
     background-image: url(https://basisbugle.files.wordpress.com/2015/01/hogwarts-harry-potter-28869061-1920-10811.jpg?w=1920&h=768&crop=1);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     
-  }
+  } 
+#user-section{
+    
+   display: flex;
+   flex-direction: column;
+    width: 20vw;
+    
+    
+}
+.hogwartsHouse {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/* #gryffindor-div {
+    
+   grid-column-start: 2;
+   grid-row-start: 2;
+   padding: 10px;
+}
+#slytherin-div {
+    grid-column-end: 1;
+    grid-row-end: ;
+    
+}
+#hufflepuff-div {
+    grid-column-start: ;
+    grid-row-start: ;
+
+}
+
+#ravenclaw-div{
+    grid-column-start: ;
+    grid-row-start: ;
+} */
+
+.gLogo {
+
+    width: 250px;
+    height: 300px;
+}
+.sLogo{
+    width: 250px;
+    height: 300px;
+}
+
+.hLogo{
+    width: 250px;
+    height: 300px;
+}
+.rLogo{
+    
+    width: 250px;
+    height: 300px;
+}
+
+
+.header img{
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 500px;
+    height: 100%;
+}
+
+.header {
+    grid-column-start: 2;   
+    margin-left: auto;
+    margin-right: auto;
+    width:80%;
+    height: 300px;
+} 
+

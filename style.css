@@ -1,7 +1,7 @@
 body {
     display: grid;
     grid-template-columns: 250px auto 250px;
-    grid-template-rows:  400px 600px 600px;
+    grid-template-rows:  500px 600px 600px;
     padding: 5px;
     background-image: url(https://basisbugle.files.wordpress.com/2015/01/hogwarts-harry-potter-28869061-1920-10811.jpg?w=1920&h=768&crop=1);
     background-position: center center;
@@ -105,4 +105,34 @@ body {
     text-align: center;
 } 
 
+#links {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.link{
+    padding:5px;
+}
 
+#quiz {
+    grid-column-start: 3;
+    grid-row-start: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+#albus {
+    width:300px;
+    height: 550px;
+}
+#tom{
+    grid-column-start: 3;
+    grid-row-start: 3;
+}
+#voldamort {
+    width:300px;
+    height: 550px;
+
+}

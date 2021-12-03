@@ -42,13 +42,14 @@ console.log(characters)
                 let ancestry = $(`<div><h3> Lineage: ${elem.ancestry.toUpperCase()}</h3></div>`).addClass('ancestry-card')
                 $(ancestry).appendTo(resultCard)
 
-                // let wood = elem.wand.wood
-                // let core = elem.wand.core
-                // let length= elem.wand.length
+                let wood = $(`<div><h4> Wand Matierial: ${elem.wand.wood}</h4></div>`).addClass('wood')
+                $(wood).appendTo(resultCard)
 
-                // let wand= $(`<div><h4> Wand Made of:${wood} Core of: ${core} length of: ${length}</h4></div>`).addClass('wand-card')
-                // $(wand).appendTo(resultCard)
-                
+                let core = $(`<div><h4> Wand Core: ${elem.wand.core}</h4></div>`).addClass('core')
+                $(core).appendTo(resultCard)
+
+                let length = $(`<div><h4> Wand length: ${elem.wand.length}</h4></div>`).addClass('wand-length')
+                $(length).appendTo(resultCard)
 
 
                         

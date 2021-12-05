@@ -1,4 +1,7 @@
 
+
+
+
 search()
 function search (){
     let characters 
@@ -50,27 +53,16 @@ console.log(characters)
 
                 let length = $(`<div><h4> Wand length: ${elem.wand.length}</h4></div>`).addClass('wand-length')
                 $(length).appendTo(resultCard)
-
-
-                        
-
-
-                    } 
+                } 
             });
-
-            
     })
 }
 
-
-
-
-
-
-
-
-
 gryffindorImage()
+slytherinImage()
+hufflepuffImage()
+ravenclawImage()
+
 
 function gryffindorImage(){
     let gLogo = $('<img></img>').addClass('gLogo').attr('src','https://static.wikia.nocookie.net/pottermore/images/1/16/Gryffindor_crest.png/revision/latest/scale-to-width-down/217?cb=20111112232412')
@@ -100,7 +92,7 @@ async function gryffindorButton (){
         }
     }
 }
-slytherinImage()
+
 function slytherinImage(){
     let sLogo = $('<img></img>').addClass('sLogo').attr('src','https://www.nicepng.com/png/full/43-438820_slytherin-crest-slytherin-png.png')
     $(sLogo).appendTo('#slytherin-div')
@@ -131,7 +123,7 @@ async function slytherinButton (){
     }
  }
     
- hufflepuffImage()
+ 
  function hufflepuffImage(){
      let hLogo = $('<img></img>').addClass('hLogo').attr('src','https://static.wikia.nocookie.net/the-potters/images/5/5e/Hufflepuff_crest.png/revision/latest/scale-to-width-down/204?cb=20200616224259')
      $(hLogo).appendTo('#hufflepuff-div')
@@ -162,7 +154,7 @@ async function hufflepuffButton (){
 }
     
 
-ravenclawImage()
+
 function ravenclawImage(){
     let rLogo = $('<img></img>').addClass('rLogo').attr('src','https://static.wikia.nocookie.net/pottermore/images/4/40/Ravenclaw_Crest_1.png/revision/latest/scale-to-width-down/826?cb=20140604194505')
     $(rLogo).appendTo('#ravenclaw-div')
@@ -192,8 +184,3 @@ async function ravenclawButton (){
         }
     }
  }
-    
-
-
-
-

@@ -26,9 +26,10 @@ body {
 #searchResults { 
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     grid-column-start: 2;
     grid-row-start: 3;
-    overflow: auto;
+    /* overflow: auto; */
     color: white;
     
 }
